@@ -839,8 +839,8 @@ class AutoZoomOnFocus(sublime_plugin.EventListener, WithSettings):
         sublime.set_timeout(lambda: self.delayed_zoom(view, fraction), 0)
 
 
-class TravelToPaneOnMoveCommand(sublime_plugin.EventListener, WithSettings):
 
+class TravelToPaneOnMoveCommand(sublime_plugin.EventListener, WithSettings):
     # I know there is Command.want_event can trigger some input function when mouse action.
     # But there any sublime callback like on_mouse_move?
     # View.on_hover Event callback
