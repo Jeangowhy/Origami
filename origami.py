@@ -1,5 +1,4 @@
 import sublime
-# from sublime import HoverZone
 import sublime_api
 import sublime_plugin
 import copy
@@ -848,6 +847,10 @@ class TravelToPaneOnMoveCommand(sublime_plugin.EventListener, WithSettings):
     # which can be conver to window position like this below:
     #   view.text_to_window(txtpoint)
     # hover_zone enum defined sublime.HoverZone under sublime Python 3.8
+    #
+    # Add .python-version to support newest ST4 #174
+    # https://www.sublimetext.com/docs/api_environments.html#python-version
+    #   print({"sys.version": sys.version})
     def on_hover(self, view, txtpoint, hover_zone):
 
         if not self.settings().get("auto_focus_on_hover") : 
